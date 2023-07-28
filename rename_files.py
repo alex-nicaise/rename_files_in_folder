@@ -13,9 +13,11 @@ def main():
 
         # REPLACE PRE-FIX AS YOU LIKE
 
-        prefix = "image_{iterator:x}.jpg".format(iterator = i)
+        prefix = "my_image"
 
-        os.rename(path + file, path + prefix)
+        new_file = "{prefix}_{iterator:x}.jpg".format(prefix = prefix, iterator = i)
+
+        os.rename(path + file, path + new_file)
 
         i += 1
 
